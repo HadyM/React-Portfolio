@@ -34,18 +34,17 @@ const Logo = () => {
           duration: 4,
         }
       );
-      // .isActive(outlineLogoRef.current, {
-      //   opacity: 0,
-      // });
-      // .fromTo(
-      //   outlineLogoRef.current,
-      //   {
-      //     opacity: 1,
-      //   },
-      //   {
-      //     opacity: 0,
-      //   }
-      // );
+
+      gsap.fromTo(
+        outlineLogoRef.current,
+        {
+          opacity: 1,
+        },
+        {
+          delay: 4,
+          opacity: 0,
+        }
+      );
     };
   }, []);
 

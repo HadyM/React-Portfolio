@@ -26,11 +26,9 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    return setLetterClass(
-      setTimeout(() => {
-        setLetterClass('text-animate-hover');
-      }, 4000)
-    );
+    setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 4000);
   }, []);
 
   return (
