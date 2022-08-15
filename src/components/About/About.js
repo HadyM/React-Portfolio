@@ -1,4 +1,13 @@
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faAngular,
+  faCss3,
+  faGitAlt,
+  faHtml5,
+  faJsSquare,
+  faReact,
+} from '@fortawesome/free-brands-svg-icons';
 import AnimatedLettering from '../AnimatedLettering/AnimatedLettering';
 import './About.scss';
 
@@ -35,6 +44,28 @@ const About = () => {
           person, father to be, a anime fanatic, gaming enthusiast, and
           tech-obsessed!!!
         </p>
+      </div>
+      <div className="stage-cube-cont">
+        <div className="cubespinner">
+          <div className="face1">
+            <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+          </div>
+          <div className="face2">
+            <FontAwesomeIcon icon={faHtml5} color="#DD0031" />
+          </div>
+          <div className="face3">
+            <FontAwesomeIcon icon={faCss3} color="#DD0031" />
+          </div>
+          <div className="face4">
+            <FontAwesomeIcon icon={faReact} color="#DD0031" />
+          </div>
+          <div className="face5">
+            <FontAwesomeIcon icon={faJsSquare} color="#DD0031" />
+          </div>
+          <div className="face6">
+            <FontAwesomeIcon icon={faGitAlt} color="#DD0031" />
+          </div>
+        </div>
       </div>
     </div>
   );
