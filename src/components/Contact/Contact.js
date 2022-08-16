@@ -1,16 +1,36 @@
 import { Loader } from 'react-loaders';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import AnimatedLettering from '../AnimatedLettering/AnimatedLettering';
 import './Contact.scss';
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
+  const form = useRef();
+
+  const SERVICE_ID = `${process.env.REACT_APP_SERVICE_ID}`;
+  const TEMPLATE_ID = `${process.env.REACT_APP_TEMPLATE_ID}`;
+  const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 3000);
   }, []);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, API_KEY).then(
+      () => {
+        alert('Message successfully sent!');
+        window.location.reload(false);
+      },
+      () => {
+        alert('Failed to send the message, please try again');
+      }
+    );
+  };
 
   return (
     <>
@@ -30,15 +50,20 @@ const Contact = () => {
             I look forward to hearing from you!
           </p>
           <div className="contact-form">
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="user_name"
+                    placeholder="Name"
+                    required
+                  />
                 </li>
                 <li className="half">
                   <input
                     type="email"
-                    name="email"
+                    name="user_email"
                     placeholder="Email"
                     required
                   />
@@ -46,7 +71,7 @@ const Contact = () => {
                 <li>
                   <input
                     type="text"
-                    name="subject"
+                    name="user_subject"
                     placeholder="Subject"
                     required
                   />
