@@ -1,5 +1,6 @@
 import { Loader } from 'react-loaders';
 import { useState, useEffect, useRef } from 'react';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import emailjs from '@emailjs/browser';
 import AnimatedLettering from '../AnimatedLettering/AnimatedLettering';
 import './Contact.scss';
@@ -85,6 +86,27 @@ const Contact = () => {
               </ul>
             </form>
           </div>
+        </div>
+        <div className="info-map">
+          Hady Mohamed,
+          <br />
+          3rd Street,
+          <br />
+          Middletown,
+          <br />
+          10940,
+          <br />
+          United States
+          <br />
+          <span>devhady87@gmail.com</span>
+        </div>
+        <div className="map-wrap">
+          <MapContainer center={[42.155686, -74.525351]} zoom={13}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[42.155686, -74.525351]}>
+              <Popup>Hady lives here, come over for a cup of coffee :)</Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
       <Loader type="pacman" />
