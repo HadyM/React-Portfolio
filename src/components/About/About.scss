@@ -3,6 +3,27 @@
     left: 20%;
   }
 }
+.Image {
+  margin-left: 36%;
+  margin-top: 3%;
+
+  .Profile-Picture {
+    width: 350px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.6);
+    animation: fadeIn 1s 3.8s backwards;
+
+    &.grow {
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
 .stage-cube-cont {
   width: 50%;
   height: 100%;

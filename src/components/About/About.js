@@ -9,6 +9,7 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import { Loader } from 'react-loaders';
+import ProfilePic from '../../assets/images/hady.jpeg';
 import AnimatedLettering from '../AnimatedLettering/AnimatedLettering';
 import './About.scss';
 
@@ -24,6 +25,13 @@ const About = () => {
   return (
     <>
       <div className="container about-page">
+        <div className="Image">
+          <img
+            className="Profile-Picture grow"
+            src={ProfilePic}
+            alt="profilepicture"
+          />
+        </div>
         <div className="text-zone">
           <h1>
             <AnimatedLettering
