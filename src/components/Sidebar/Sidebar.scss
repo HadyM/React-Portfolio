@@ -90,6 +90,13 @@
       }
     }
 
+    a.projects-link {
+      &:after {
+        letter-spacing: 1px;
+        content: 'PROJECTS';
+      }
+    }
+
     a.active {
       svg {
         color: rgba(255, 0, 0, 0.6);
