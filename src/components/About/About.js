@@ -33,9 +33,9 @@ const About = () => {
             />
           </h1>
           <p>
-            I'm very ambitious Full-stack web developer looking for a role in
-            established IT company with the opportunity to work with the latest
-            technologies and on challenging and diverse projects.
+            I'm a very ambitious Full-stack web developer looking for a role in
+            an established IT company with the opportunity to work with the
+            latest technologies and on challenging and diverse projects.
           </p>
           <p align="LEFT">
             I'm quietly confident, naturally curious, and perpetually working on
