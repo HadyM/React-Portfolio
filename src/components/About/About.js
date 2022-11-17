@@ -47,12 +47,17 @@ const About = () => {
           </p>
           <p align="LEFT">
             I'm quietly confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            improving my chops one design problem at a time. I am always trying
+            to learn something new and I do this in two ways: I made it a habit
+            to practice my DSA (Data Structure Algorithms) daily, and to
+            continuously be working on a new project or improving upon an
+            existing project.
           </p>
           <p>
             If I need to define myself in one sentence that would be a family
             person, father to be, a anime fanatic, gaming enthusiast, and
-            tech-obsessed!!!
+            tech-obsessed!!! Please check my projects section for examples of my
+            work.
           </p>
         </div>
         <div className="stage-cube-cont">
