@@ -32,8 +32,10 @@
     z-index: 0;
   }
 
-  @keyframes fade-in {
-    opacity: 1;
+  @keyframes animation {
+    fade-in {
+      opacity: 1;
+    }
   }
 }
 
