@@ -1,7 +1,6 @@
 {
   "name": "react-portfolio",
   "version": "0.1.0",
-  "homepage": "https://HadyM.github.io/React-Portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
@@ -25,10 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "start": "react-scripts start",
-    "predeploy": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -51,7 +48,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
     "node-sass": "^7.0.1"
   }
 }
