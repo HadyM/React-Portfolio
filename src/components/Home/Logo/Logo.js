@@ -11,15 +11,11 @@ const Logo = () => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // put all your GSAP/ScrollTrigger code inside here...
       let bgRefCurrent = bgRef.current;
       let outlineLogoRefCurrent = outlineLogoRef.current;
       let solidLogoRefCurrent = solidLogoRef.current;
 
       gsap.registerPlugin(DrawSVGPlugin);
-
-      // return () => {
-      console.log('Function is runing!');
 
       gsap
         .timeline()
@@ -54,56 +50,10 @@ const Logo = () => {
           opacity: 0,
         }
       );
-      // };
     });
 
-    return () => ctx.revert(); // <-- CLEANUP!
+    return () => ctx.revert();
   }, []);
-  // useEffect(() => {
-  //   let bgRefCurrent = bgRef.current;
-  //   let outlineLogoRefCurrent = outlineLogoRef.current;
-  //   let solidLogoRefCurrent = solidLogoRef.current;
-
-  //   gsap.registerPlugin(DrawSVGPlugin);
-
-  //   return () => {
-  //     console.log('Function is runing!');
-
-  //     gsap
-  //       .timeline()
-  //       .to(bgRefCurrent, {
-  //         duration: 1,
-  //         opacity: 1,
-  //       })
-  //       .from(outlineLogoRefCurrent, {
-  //         drawSVG: 0,
-  //         duration: 20,
-  //       });
-
-  //     gsap.fromTo(
-  //       solidLogoRefCurrent,
-  //       {
-  //         opacity: 0,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 4,
-  //         duration: 4,
-  //       }
-  //     );
-
-  //     gsap.fromTo(
-  //       outlineLogoRefCurrent,
-  //       {
-  //         opacity: 1,
-  //       },
-  //       {
-  //         delay: 4,
-  //         opacity: 0,
-  //       }
-  //     );
-  //   };
-  // }, []);
 
   return (
     <div className="logo-container" ref={bgRef}>
