@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 import LogoH from '../../../assets/images/logo-s.png';
@@ -9,7 +9,7 @@ const Logo = () => {
   const outlineLogoRef = useRef();
   const solidLogoRef = useRef();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let ctx = gsap.context(() => {
       // put all your GSAP/ScrollTrigger code inside here...
       let bgRefCurrent = bgRef.current;
@@ -18,47 +18,47 @@ const Logo = () => {
 
       gsap.registerPlugin(DrawSVGPlugin);
 
-      return () => {
-        console.log('Function is runing!');
+      // return () => {
+      console.log('Function is runing!');
 
-        gsap
-          .timeline()
-          .to(bgRefCurrent, {
-            duration: 1,
-            opacity: 1,
-          })
-          .from(outlineLogoRefCurrent, {
-            drawSVG: 0,
-            duration: 20,
-          });
+      gsap
+        .timeline()
+        .to(bgRefCurrent, {
+          duration: 1,
+          opacity: 1,
+        })
+        .from(outlineLogoRefCurrent, {
+          drawSVG: 0,
+          duration: 20,
+        });
 
-        gsap.fromTo(
-          solidLogoRefCurrent,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            delay: 4,
-            duration: 4,
-          }
-        );
+      gsap.fromTo(
+        solidLogoRefCurrent,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          delay: 4,
+          duration: 4,
+        }
+      );
 
-        gsap.fromTo(
-          outlineLogoRefCurrent,
-          {
-            opacity: 1,
-          },
-          {
-            delay: 4,
-            opacity: 0,
-          }
-        );
-      };
+      gsap.fromTo(
+        outlineLogoRefCurrent,
+        {
+          opacity: 1,
+        },
+        {
+          delay: 4,
+          opacity: 0,
+        }
+      );
+      // };
     });
+
     return () => ctx.revert(); // <-- CLEANUP!
   }, []);
-
   // useEffect(() => {
   //   let bgRefCurrent = bgRef.current;
   //   let outlineLogoRefCurrent = outlineLogoRef.current;
