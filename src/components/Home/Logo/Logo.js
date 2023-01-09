@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 import LogoH from '../../../assets/images/logo-s.png';
@@ -9,7 +9,7 @@ const Logo = () => {
   const outlineLogoRef = useRef();
   const solidLogoRef = useRef();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       // put all your GSAP/ScrollTrigger code inside here...
       let bgRefCurrent = bgRef.current;
