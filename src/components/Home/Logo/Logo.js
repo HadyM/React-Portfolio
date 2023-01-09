@@ -14,8 +14,12 @@ const Logo = () => {
     let outlineLogoRefCurrent = outlineLogoRef.current;
     let solidLogoRefCurrent = solidLogoRef.current;
 
+    console.log(bgRefCurrent, outlineLogoRefCurrent, solidLogoRefCurrent);
+
     gsap.registerPlugin(DrawSVGPlugin);
+
     return () => {
+      console.log('Function is runing!');
       gsap
         .timeline()
         .to(bgRefCurrent, {
