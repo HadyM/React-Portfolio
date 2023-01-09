@@ -17,15 +17,6 @@
     margin-top: 79px;
     margin-left: 70px;
     transform: rotateZ(30.8deg) !important;
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
   }
 
   .solid-logo {
@@ -45,4 +36,13 @@
 .svg-container {
   stroke: #ff0000;
   stroke-width: 10px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
