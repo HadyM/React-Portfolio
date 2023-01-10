@@ -1,0 +1,11 @@
+export const first = require('./RecipeAppProject/CookingStyles.jpeg');
+export const second = require('./RecipeAppProject/CuttingStyles.jpeg');
+export const third = require('./RecipeAppProject/HomePage.jpeg');
+export const fourth = require('./RecipeAppProject/IndividualRecipe.jpeg');
+export const fifth = require('./RecipeAppProject/Knives.jpeg');
+export const sixth = require('./RecipeAppProject/NewRecipe.jpeg');
+export const seventh = require('./RecipeAppProject/PotsandPans.jpeg');
+export const eigth = require('./RecipeAppProject/PrintRecipe.jpeg');
+export const nineth = require('./RecipeAppProject/RecipePage.jpeg');
+export const tenth = require('./RecipeAppProject/RecipesCookingStyles.jpeg');
+export const eleventh = require('./RecipeAppProject/UpdateRecipe.jpeg');
