@@ -124,4 +124,17 @@
     height: auto;
     min-height: auto;
   }
+
+  .about-page,
+  .contact-page,
+  .projects-page {
+    .text-zone {
+      position: initial;
+      transform: none;
+      width: 100%;
+      display: block;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+  }
 }

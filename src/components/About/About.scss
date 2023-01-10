@@ -103,3 +103,22 @@
     transform: rotateX(90deg);
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .Image {
+    margin-left: 70px;
+
+    .Profile-Picture {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .stage-cube-cont {
+    margin-top: -60px;
+    position: initial;
+    width: 100%;
+    height: 0%;
+    overflow: visible;
+  }
+}

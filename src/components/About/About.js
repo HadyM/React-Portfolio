@@ -28,6 +28,7 @@ const About = () => {
         <div className="Image">
           <img
             className="Profile-Picture grow"
+            id="profile-picture"
             src={ProfilePic}
             alt="profilepicture"
           />

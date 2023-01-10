@@ -160,6 +160,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 30px;
+        top: 50px;
+        margin-top: 50px;
+      }
+
+      a.active {
+        color: rgba(255, 0, 0, 0.6) !important;
       }
 
       a:after {
@@ -167,6 +174,8 @@
         position: initial;
         width: auto;
         margin-left: 10px;
+        font-size: 18px;
+        font-weight: 600;
       }
 
       a svg {
