@@ -18,7 +18,7 @@ import './Projects.scss';
 
 const Projects = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
-  const [images, setImages] = useState([
+  const [images] = useState([
     first,
     second,
     third,
