@@ -81,3 +81,58 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .tags,
+  .home-page h1::before,
+  .home-page h1::after {
+    display: none;
+  }
+
+  .home-page h1 {
+    font-size: 40px;
+  }
+
+  .home-page {
+    .text-zone {
+      position: initial;
+      width: 100%;
+      transform: none;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .flat-button {
+      float: none;
+      display: block;
+      margin: 20px auto 0 auto;
+      width: 125px;
+
+      &:hover {
+        background: rgba(255, 0, 0, 0.6);
+        color: #333;
+      }
+    }
+
+    .logo-container {
+      position: relative;
+      width: 140px;
+      height: auto;
+      top: 10px;
+      right: 0;
+      box-sizing: border-box;
+      margin: auto;
+      left: 0;
+
+      svg {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+      }
+    }
+  }
+}
