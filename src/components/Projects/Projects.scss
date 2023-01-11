@@ -78,3 +78,47 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .container,
+  .projects-page,
+  .text-zone {
+    width: 100%;
+    display: initial;
+    box-sizing: border-box;
+
+    h1.title {
+      margin-top: 350px;
+    }
+
+    .projectOne {
+      width: 100%;
+      padding: 10px;
+      margin-top: -360px;
+      box-sizing: border-box;
+
+      .titleTwo {
+        font-size: 25px;
+      }
+      .titleThree {
+        font-size: 15px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .slideshow {
+    .slideshow-images {
+      height: 200px;
+      max-width: calc(90% - 10px);
+    }
+  }
+
+  a {
+    font-size: 10px;
+  }
+
+  .text-animate-hover {
+    font-size: 50px;
+  }
+}
